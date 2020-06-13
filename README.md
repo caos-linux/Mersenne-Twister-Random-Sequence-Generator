@@ -1,5 +1,5 @@
 # Mersenne Twister Random Sequence Generator
-This form allows you to generate randomized sequences of integers by mean of a Mersenne Twister implementation in javascript. It lets you specify a seed value. 
+The form in random.html allows you to generate randomized sequences of integers by mean of a Mersenne Twister implementation in javascript. It lets you specify a seed value. 
 
 The sequence does not contain duplicates (the numbers are like raffle tickets drawn from a hat).
 
