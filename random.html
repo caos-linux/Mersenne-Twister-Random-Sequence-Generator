@@ -54,9 +54,12 @@ var estr =[];
 
 
 function getRandomFromBucket(rnd) {
-//   var randomIndex = Math.floor(Math.random()*bucket.length);
-   var randomIndex = Math.floor(rnd*bucket.length);
-   return bucket.splice(randomIndex, 1)[0];
+    var randomIndex = Math.floor(rnd*bucket.length);
+    // rnd*bucket.lenght is on [0,bucket.lenght)-real-interval
+    // The Math.floor() function returns the largest integer less than or equal to a given number. 
+    return bucket.splice(randomIndex, 1)[0];
+    // spice removes one element at "randomIndex" position and returns an array with that element
+    // [0]: return only the value inside the one-size array
 }
 
 function myFunction() {
@@ -74,7 +77,8 @@ function myFunction() {
   estr =[];
 
   for (var i=min;i<=max;i++) {
-    bucket.push(i);
+      bucket.push(i);
+      // bucket =[1,2,3,...,max]
    } 
 
 /*
@@ -85,8 +89,9 @@ function myFunction() {
 */
 
   for (var i=min;i<=max;i++) {
-  estr.push(getRandomFromBucket(m.random()));
-   } 
+      // m.random() is on [0,1)-real-interval
+      estr.push(getRandomFromBucket(m.random()));
+  } 
 //  text += "estr = " + estr + "<br>";
 
 
